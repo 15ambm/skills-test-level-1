@@ -1,29 +1,27 @@
-# README #
+# Cevnn Payments Skills Test Level 1 #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Thank you for your interest in working with Cevnn Payments.  This take home coding test is intended to allow you to demonstrate your programming skills.  It is expect to take 2-4 hours to complete.  
 
-### What is this repository for? ###
+### Steps for completion ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Fork this repository
+* Add an endpoint to the API to fit the requirements
+* Commit and push your changes
+* Send a link to your fork to us
+* Please be ready to explain your code at your next interview!
 
-### How do I get set up? ###
+### Requirements
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+The file gladiators.csv is a list of American Gladiators with the first year that they appeared on the show, as well as the last year that they appeared on the show.  
 
-### Contribution guidelines ###
+We need you to write the following REST API:
 
-* Writing tests
-* Code review
-* Other guidelines
+GET     /public/getGladiators/:year
+    Returns a JSON response containing a list of all American Gladiators that appeared on the show during the given year.
 
-### Who do I talk to? ###
+The endpoint has already been defined for you in routesPublic.js.  You need only open controllers/public.js and fill in the getGladiators function to return the JSON list of gladiators.
 
-* Repo owner or admin
-* Other community or team contact
+HINT: To view your output, try running
+npm run dev
+and view the out here:
+http://localhost:3000/public/getGladiators/92

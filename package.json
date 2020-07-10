@@ -1,0 +1,24 @@
+{
+  "name": "test1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "production": "node ./bin/www",
+    "staging": "NODE_ENV=staging node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "config": "^3.0.1",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "lodash": "^4.17.11",
+    "nodemon": "^1.18.9",
+    "pg": "^7.8.0",
+    "qs": "^6.7.0"
+  }
+}

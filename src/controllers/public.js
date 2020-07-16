@@ -21,7 +21,7 @@ function getGladiatorsByYear(req, res) {
     })
 
     const validateYear = (year) => {
-      let parsedYear = parseInt(year, 10)
+      const parsedYear = parseInt(year, 10)
       if(isNaN(parsedYear)) {
         console.log("Invalid Year")
         return false
@@ -29,7 +29,7 @@ function getGladiatorsByYear(req, res) {
     }
 
     const sendResponse = (data) => {
-      let response = filterGladiators(data)
+      const response = filterGladiators(data)
       console.log(`Retrieved ${response.length} gladiators in the year ${year}`)
       if(response.length > 0) {
         res.json(response)
@@ -39,14 +39,12 @@ function getGladiatorsByYear(req, res) {
     }
     
     const filterGladiators = (data) => {
-      const response = data.filter(item => {
-        let firstYear = parseInt(item['first year'], 10)
-        let lastYear = parseInt(item['last year'], 10)
-        if(year >= firstYear && year <= lastYear) {
-          return true
-        }
+      const filteredData = data.filter(item => {
+        const firstYear = parseInt(item['first year'], 10)
+        const lastYear = parseInt(item['last year'], 10)
+        if(year >= firstYear && year <= lastYear) return true
       })
-      return response
+      return filteredData
     }
 }
 

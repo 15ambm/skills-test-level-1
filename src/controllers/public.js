@@ -16,7 +16,7 @@ function getGladiatorsByYear(req, res) {
       if(validateYear(year)) {
         sendResponse(data)
       } else {
-        res.json([])
+        res.status(400).end()
       }
     })
 
@@ -34,7 +34,7 @@ function getGladiatorsByYear(req, res) {
       if(response.length > 0) {
         res.json(response)
       } else {
-        res.json([])
+        res.status(404).end()
       }
     }
     
